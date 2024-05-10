@@ -1,5 +1,54 @@
+/* Reset do CSS */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Root */
+
+:root{
+    --main-bg: linear-gradient(-45deg, #3eff3e, #000000, #000000, #ff00ff);
+    --nav-bg: rgba(39, 39, 39, 0.3);
+    --text-color: #f8fafc;
+}
+
+/* Body e Animação de fundo */
+
+body {
+	background: var(--main-bg);
+	background-size: 400% 400%;
+	animation: gradient 120s ease infinite;
+	height: 100vh;
+
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Resto */
+
+nav{
+    background-color: var(--nav-bg);
 }
